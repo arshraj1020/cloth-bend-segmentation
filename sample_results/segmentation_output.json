@@ -1,0 +1,64 @@
+{
+    "trajectory_id": 27,
+    "camera_index": 0,
+    "target_class": "mop",
+    "anchor_type": "center",
+    "total_frames": 40,
+    "motion_start": {
+        "frame_number": 1,
+        "x": 253.655029296875,
+        "y": 176.3093719482422
+    },
+    "boundaries": [
+        {
+            "boundary_id": 1,
+            "frame_number": 16,
+            "x": 492.2587585449219,
+            "y": 147.863525390625,
+            "direction_change": 177.77753675738467,
+            "boundary_score": 5.925917891912822,
+            "cue_type": "bend_angle_ge_30deg"
+        },
+        {
+            "boundary_id": 2,
+            "frame_number": 27,
+            "x": 84.47772216796875,
+            "y": 161.3037109375,
+            "direction_change": 178.234196885534,
+            "boundary_score": 5.941139896184467,
+            "cue_type": "bend_angle_ge_30deg"
+        }
+    ],
+    "segments": [
+        {
+            "segment_id": 1,
+            "label": "Segment_1",
+            "start_frame": 1,
+            "end_frame": 16,
+            "duration_frames": 16
+        },
+        {
+            "segment_id": 2,
+            "label": "Segment_2",
+            "start_frame": 17,
+            "end_frame": 27,
+            "duration_frames": 11
+        },
+        {
+            "segment_id": 3,
+            "label": "Segment_3",
+            "start_frame": 28,
+            "end_frame": 40,
+            "duration_frames": 13
+        }
+    ],
+    "output_files": {
+        "framewise_csv": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/framewise_data.csv",
+        "boundary_csv": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/boundary_points.csv",
+        "segment_csv": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/temporal_segments.csv",
+        "summary_csv": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/trajectory_summary.csv",
+        "final_graph": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/trajectory_027_trajectory_graph.png",
+        "preview_graph": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/trajectory_027_trajectory_graph_preview.png",
+        "video": "/Users/arshraj/Desktop/mop_trajectory_output/mop_realtime_20260616_171116/trajectory_027/trajectory_027_annotated_video.mp4"
+    }
+}
