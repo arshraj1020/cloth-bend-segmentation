@@ -566,8 +566,6 @@ If you found this repository useful,
 
 ### Developed by **Arsh Raj**
 
-**VIT Bhopal University**
-
 Computer Vision • Deep Learning • Robotics • AI
 
 </div>
