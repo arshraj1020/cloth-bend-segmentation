@@ -232,43 +232,40 @@ The result is a complete trajectory analysis pipeline capable of generating stru
 
 ---
 
-# Processing Pipeline
+# ## Processing Pipeline
 
-The complete workflow of the proposed framework is illustrated below.
+The complete workflow of the proposed framework is illustrated below. It combines **deep learning** with **classical signal processing** to achieve robust, real-time trajectory segmentation.
 
-```text
-                Webcam Stream
-                      │
-                      ▼
-        YOLOv8 OBB Object Detection
-                      │
-                      ▼
-     Geometric Center Point Extraction
-                      │
-                      ▼
-          Object Association & Tracking
-                      │
-                      ▼
-        Exponential Moving Average (EMA)
-                      │
-                      ▼
-      Savitzky–Golay Trajectory Smoothing
-                      │
-                      ▼
-       Automatic Motion Start Detection
-                      │
-                      ▼
-          Bend Angle Computation
-                      │
-                      ▼
-      Automatic Temporal Segmentation
-                      │
-                      ▼
-      CSV • JSON • Graph • Video Export
+```mermaid
+flowchart TD
+    A[📷 Webcam Stream] --> B[YOLOv8 OBB<br/>Object Detection]
+    B --> C[Geometric Center<br/>Point Extraction]
+    C --> D[Object Association<br/>&amp; Tracking]
+    D --> E[Exponential Moving<br/>Average (EMA)]
+    E --> F[Savitzky–Golay<br/>Trajectory Smoothing]
+    F --> G[Automatic Motion<br/>Start Detection]
+    G --> H[Bend Angle<br/>Computation]
+    H --> I[Automatic Temporal<br/>Segmentation]
+    I --> J[CSV • JSON • Graph<br/>• Video Export]
+
+    classDef dl fill:#CECBF6,stroke:#534AB7,stroke-width:1px,color:#26215C;
+    classDef dsp fill:#9FE1CB,stroke:#0F6E56,stroke-width:1px,color:#04342C;
+    classDef io fill:#F5C4B3,stroke:#993C1D,stroke-width:1px,color:#4A1B0C;
+
+    class B,C,D dl
+    class E,F,G,H,I dsp
+    class A,J io
 ```
 
-The framework combines **deep learning** with **classical signal processing** to obtain robust trajectory segmentation in real time.
+<div align="center">
 
+| Stage | Component |
+|---|---|
+| 🟣 **Deep Learning** | YOLOv8 OBB Detection · Center Extraction · Tracking |
+| 🟢 **Signal Processing** | EMA · Savitzky–Golay · Motion Detection · Bend Angle · Segmentation |
+| 🟠 **I/O** | Webcam Input · CSV/JSON/Graph/Video Output |
+
+</div>
 ---
 
 # Sample Result
